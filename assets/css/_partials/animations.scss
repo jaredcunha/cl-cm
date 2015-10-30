@@ -1,0 +1,471 @@
+@import "bourbon";
+@import "_modules/_all";
+
+.animation-wrap {
+	position: absolute;
+	width: 100%;
+	height: 75%;
+	bottom: 0;
+	@include respond-to(expansionA) {
+		font-size:1.2em;
+	}
+	@include respond-to(expansionB) {
+		font-size:1.4em;
+	}
+	@include respond-to(landscape-mobile) {
+		right: 0;
+		width: 62%;
+		border-radius: 5px;
+		margin: 1.2em;
+		height: 100%;
+	}
+	
+}
+
+.svg-item {
+	display: block;
+	width: 100%;
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.svg-wrap {
+	position: absolute;
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+/*==========================================
+	SLIDE 1
+============================================ */
+.animation-wrap--intro {
+	font-size: .6em;
+	bottom: 4.5em;
+	@include respond-to(landscape-mobile) {
+		font-size: .4em;
+	}
+	@include respond-to(expansionA__minor) {
+		font-size: .7em;
+		bottom: 6em;
+	}
+	@include respond-to(expansionA) {
+		font-size: 1.2em;
+	}
+	@include respond-to(expansionB) {
+		font-size: 1.2em;
+	}
+	@include respond-to(expansionC) {
+		font-size: 1.25em;
+		bottom: 4em;
+	}
+	@include respond-to(expansionHeightA) {
+		font-size: 1.5em;
+	}
+
+}
+
+.olives {
+	@include olives-start;
+	width: 5.5em;
+	height: 5.5em;
+	bottom: 23em;
+	left: 50%;
+	margin-left: -15em;
+	.in-view & {
+		@include animation(olives .8s $smoothEaseOut 1s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.caprese {
+	@include caprese-start;
+	width: 12.5em;
+	left: 50%;
+	margin-left: -6.25em;
+	bottom: 24em;
+	.in-view & {
+		@include animation(caprese 1s $smoothEaseOut .5s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.cocktail {
+	@include cocktail-start;
+	width: 7.1em;
+	left: 50%;
+	margin-left: 9em;
+	bottom: 22.5em;
+	.in-view & {
+		@include animation(cocktail .7s $smoothEaseOut 1.5s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.money-pile1 {
+	@include money-pile1-start;
+	position: absolute;
+	top: 3.6em;
+	z-index:15;
+	left: .55em;
+	.in-view & {
+		@include animation(money-pile1 .25s ease-in 2s);
+		@include animation-fill-mode(forwards);
+	}
+	.no-csstransforms3d & {
+		opacity: 1;
+		@include transform(scale(1));
+	}
+}
+
+.money-pile2 {
+	@include money-pile2-start;
+	position: absolute;
+	top: 3.6em;
+	z-index:17;
+	left: .55em;
+	.in-view & {
+		@include animation(money-pile2 .25s ease-in 2.2s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.money-pile3 {
+	@include money-pile3-start;
+	position: absolute;
+	top: 3.6em;
+	z-index:20;
+	left: .55em;
+	.in-view & {
+		@include animation(money-pile3 .25s ease-in 2.4s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.money-plate {
+	width: 17.25em;
+	height: 17.25em;
+	bottom: 4em;
+	left: 50%;
+	margin-left: -8.625em;
+	z-index: 10;
+}
+
+.fork {
+	width: 2.06em;
+	left: 50%;
+	margin-left: -13em;
+	bottom: 3.5em;
+}
+
+.knife {
+	width: 2em;
+	left: 50%;
+	margin-left: 10.5em;
+	bottom: 3.25em;
+}
+
+/*==========================================
+	SLIDE 2
+============================================ */
+.animation-wrap--activate {
+	font-size: .75em;
+	@include respond-to(expansionA__minor) {
+		font-size: 1.1em;
+	}
+	@include respond-to(expansionC) {
+		font-size: 1.4em;
+	}
+	@include respond-to(landscape-mobile) {
+		font-size: .75em;
+	}
+	@include respond-to(expansionHeightA) {
+		font-size: 1.8em;
+	}
+}
+
+.left-hand {
+	width: 29.3em;
+	height: 44.4em;
+	bottom: -12em;
+    left: 50%;
+  	margin-left: -26em;
+}
+
+.phone-hand {
+	width: 29.3em;
+	top: 0;
+	z-index: 5;
+}
+
+.fingers {
+	right: 0;
+	width: 3.5em;
+	z-index: 10;
+}
+
+.activate-screens {
+	z-index:7;
+	left: 18.8em;
+    top: 1em;
+}
+
+.activate-screen1 {
+	width: 7.7em;
+}
+.activate-screen2 {
+	width: 7.7em;
+	opacity: 0;
+	.in-view & {
+		@include animation(activation-enabled .5s $smoothEaseOut 1.5s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.right-hand {
+	@include activate-right-hand-start;
+	z-index: 15;
+	width: 33.25em;
+	bottom: -17em;
+	left: 50%;
+    margin-left: -3.5em;
+	.in-view & {
+		@include animation(activate-right-hand 1s $smoothEaseOut .5s, activate-right-hand-away 1s $smoothEaseOut 2s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+/*==========================================
+	SLIDE 3
+============================================ */
+.animation-wrap--dine {
+	font-size: .7em;
+	@include respond-to(expansionA__minor) {
+		font-size: 1em;
+	}
+	@include respond-to(expansionB) {
+		@include transform(rotate(-15deg) translate3d(0, 4em ,0));
+		font-size:1.6em;
+	}
+	@include respond-to(expansionC) {
+		font-size:1.8em;
+	}
+	@include respond-to(landscape-mobile) {
+		font-size: .9em;
+	}
+	@include respond-to(expansionHeightA) {
+		@include transform(rotate(-15deg) translate3d(0, 0em ,0));
+	}
+}
+
+.kebab {
+	@include kebab-start;
+	width: 32.1em;
+	bottom: 18em;
+    left: -9em;
+    @include respond-to(expansionB) {
+    	bottom: 13em;
+    }
+    .in-view & {
+		@include animation(kebab 1s $smoothEaseOut .25s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.paycard {
+	@include paycard-start;
+	width: 29.1em;
+	bottom: -6em;
+  	right: -11em;
+  	@include respond-to(expansionB) {
+    	bottom: -5em;
+    	right: -6em;
+    }
+  	.in-view & {
+		@include animation(paycard 1.25s $smoothEaseOut .6s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+/*==========================================
+	SLIDE 4
+============================================ */
+.animation-wrap--rewards {
+	bottom: -6em;
+	font-size: .8em;
+	@include respond-to(landscape-mobile) {
+		font-size: .8em;
+	}
+	@include respond-to(expansionA__minor) {
+		font-size: 1em;
+	}
+	@include respond-to(expansionA) {
+		font-size: 1.1em;
+	}
+	@include respond-to(expansionB) {
+		font-size: 1.3em;
+	}
+	@include respond-to(expansionHeightA) {
+		font-size: 1.6em;
+	}
+}
+
+.rewards-accumulation {
+	@include rewards-hand-start;
+	width: 37.35em;
+	height:44.4em;
+	top: 0;
+	left: 50%;
+	margin-left: -28.5em;
+	.in-view & {
+		@include animation(rewards-hand 2s $smoothEaseOut .25s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.rewards-screen {
+	width: 37.35em;
+	height:44.4em;
+}
+
+.rewards-amount {
+	width: 9em;
+	height: 2.5em;
+	top: 9em;
+  	left: 24.5em;
+    overflow: visible;
+}
+
+.reward1,
+.reward2,
+.reward3,
+.reward4,
+.reward5,
+.reward6 {
+	width: 9em;
+	height: 2.5em;
+}
+
+.reward2,
+.reward3,
+.reward4,
+.reward5,
+.reward6 {
+	opacity: 0;
+}
+
+.reward1 {
+	.in-view & {
+		@include animation(rewards-increase .5s $smoothEaseOut 1.5s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.reward2 {
+	.in-view & {
+		@include animation(rewards-show .5s $smoothEaseOut 1.75s, rewards-increase .5s $smoothEaseOut 2.25s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.reward3 {
+	.in-view & {
+		@include animation(rewards-show .5s $smoothEaseOut 2.5s, rewards-increase .5s $smoothEaseOut 3s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.reward4 {
+	.in-view & {
+		@include animation(rewards-show .5s $smoothEaseOut 3.25s, rewards-increase .5s $smoothEaseOut 3.75s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.reward5 {
+	.in-view & {
+		@include animation(rewards-show .5s $smoothEaseOut 4s, rewards-increase .5s $smoothEaseOut 4.5s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.reward6 {
+	.in-view & {
+		@include animation(rewards-show .5s $smoothEaseOut 4.75s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.no-svg {
+	.reward1,
+	.reward2,
+	.reward3,
+	.reward4,
+	.reward5 {
+		display: none;
+	}
+}
+
+/*==========================================
+	SLIDE 5
+============================================ */
+.animation-wrap--browse {
+	position: relative;
+	height: 25em;
+	@include respond-to(expansionB) {
+		font-size:1.8em;
+	}
+	@include respond-to(expansionC) {
+		font-size:2em;
+	}
+	@include respond-to(landscape-mobile) {
+		display: none;
+	}
+	@include respond-to(expansionHeightA) {
+		font-size: 2.2em;
+	}
+}
+
+.shiny {
+	@include shiny-start;
+	width: 5.9em;
+	left: 50%;
+	margin-left: -3.25em;
+	bottom: 16em;
+	z-index: 20;
+	.in-view & {
+		@include animation(shiny 1s linear .7s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.champaign-left {
+	@include champaign-left-start;
+	width: 27.8em;
+	bottom: 0;
+    left: 50%;
+  	margin-left: -27.91em;
+    .in-view & {
+		@include animation(champaign-left .75s $smoothEaseOut .2s, champaign-left-finish 1.5s $smoothEaseOut .9s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+.champaign-right {
+	@include champaign-right-start;
+	width: 27.8em;
+	bottom: 0;
+    left:50%;
+    margin-left: -.5em;
+    .in-view & {
+		@include animation(champaign-right .75s $smoothEaseOut .25s, champaign-right-finish 1.5s $smoothEaseOut .9s);
+		@include animation-fill-mode(forwards);
+	}
+}
+
+
+
+@import "keyframes";

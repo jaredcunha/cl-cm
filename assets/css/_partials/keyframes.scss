@@ -1,0 +1,211 @@
+@import "bourbon";
+@import "_modules/_all";
+
+/*==========================================
+	SLIDE 1
+============================================ */
+@include keyframes(olives) {
+  from {
+    @include olives-start;
+  }
+  to {
+    @include all-finish;
+  }
+}
+
+@include keyframes(caprese) {
+  from {
+    @include caprese-start;
+  }
+  to {
+    @include all-finish;
+  }
+}
+
+@include keyframes(cocktail) {
+  from {
+    @include cocktail-start;
+  }
+  to {
+    @include all-finish;
+  }
+}
+
+@include keyframes(money-pile1) {
+  from {
+    @include money-pile1-start;
+  }
+  to {
+    @include all-finish;
+  }
+}
+
+@include keyframes(money-pile2) {
+  from {
+    @include money-pile2-start;
+  }
+  to {
+    @include transform(translate3d(0,0,0) rotate(15deg) scale(1));
+	opacity: 1;
+  }
+}
+
+@include keyframes(money-pile3) {
+  from {
+    @include money-pile3-start;
+  }
+  to {
+    @include transform(translate3d(0,0,0) rotate(-10deg) scale(1));
+	opacity: 1;
+  }
+}
+
+@include keyframes(bounceUpAndDown) {
+  from {
+    @include transform(translate3d(0,.5em,0));
+  }
+  to {
+    @include transform(translate3d(0,0,0));
+  }
+}
+/*==========================================
+	SLIDE 2
+============================================ */
+@include keyframes(activate-right-hand) {
+  from {
+    @include activate-right-hand-start;
+  }
+  to {
+    @include all-finish;
+  }
+}
+
+@include keyframes(activate-right-hand-away) {
+  from {
+    @include all-finish;
+  }
+  to {
+    @include transform(translate3d(0,10%,0));
+  }
+}
+
+@include keyframes(activation-enabled) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*==========================================
+	SLIDE 3
+============================================ */
+@include keyframes(kebab) {
+  from {
+    @include kebab-start;
+  }
+  to {
+    @include all-finish;
+  }
+}
+
+@include keyframes(paycard) {
+  from {
+    @include paycard-start;
+  }
+  to {
+    @include all-finish;
+  }
+}
+
+/*==========================================
+	SLIDE 4
+============================================ */
+@include keyframes(rewards-hand) {
+  from {
+  	@include rewards-hand-start;
+  }
+  to {
+  	@include all-finish;
+  }
+}
+
+@include keyframes(rewards-show) {
+  from {
+  	opacity:0;
+  	display: block;;
+  }
+  to {
+  	opacity: 1;
+  }
+}
+
+@include keyframes(rewards-increase) {
+  0% {
+  	opacity: 1;
+  }
+  50% {
+  	@include transform(translate3d(0,0,0) scale(1));
+  	opacity: 1;
+  }
+  100% {
+  	@include transform(translate3d(0,-1em,0) scale(1.25));
+  	opacity: 0;
+  }
+}
+
+/*==========================================
+	SLIDE 5
+============================================ */
+@include keyframes(shiny) {
+  0% {
+    @include shiny-start;
+  }
+  25% {
+  	opacity: 1;
+  }
+  75% {
+  	opacity: 1;
+  }
+  100% {
+    @include all-finish;
+    opacity: 0;
+  }
+}
+
+@include keyframes(champaign-left) {
+  from {
+    @include champaign-left-start;
+  }
+  to {
+    @include all-finish;
+  }
+}
+
+@include keyframes(champaign-right) {
+  from {
+    @include champaign-right-start;
+  }
+  to {
+    @include all-finish;
+  }
+}
+
+@include keyframes(champaign-left-finish) {
+  from {
+    @include all-finish;
+  }
+  to {
+    @include champaign-left-finish;
+  }
+}
+
+@include keyframes(champaign-right-finish) {
+  from {
+    @include all-finish;
+  }
+  to {
+    @include champaign-right-finish;
+  }
+}

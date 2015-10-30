@@ -1,0 +1,91 @@
+@import "bourbon";
+@import "_global_vars";
+
+$smoothEaseOut: cubic-bezier(.21,.84,.62,.99);
+
+/*==========================================
+	GENERIC ALL ANIMATION FINISH
+============================================ */
+@mixin all-finish {
+	@include transform(translate3d(0,0,0) rotate(0deg) scale(1));
+	opacity: 1;
+}
+
+/*==========================================
+	SLIDE 1
+============================================ */
+@mixin olives-start {
+	@include transform(translate3d(-100em,-100em,0) rotate(450deg));
+}
+
+@mixin caprese-start {
+	@include transform(translate3d(0,-1000%,0));
+}
+
+@mixin cocktail-start {
+	@include transform(translate3d(30em,-40em,0) rotate(600deg));
+}
+
+@mixin money-pile1-start {
+	@include transform(scale(5) rotate(10deg));
+	opacity: 0;
+}
+
+@mixin money-pile2-start {
+	@include transform(scale(5) rotate(20deg));
+	opacity: 0;
+}
+
+@mixin money-pile3-start {
+	@include transform(scale(5) rotate(15deg));
+	opacity: 0;
+}
+
+/*==========================================
+	SLIDE 2
+============================================ */
+@mixin activate-right-hand-start {
+	@include transform(translate3d(100%,100%,0));
+}
+
+/*==========================================
+	SLIDE 3
+============================================ */
+@mixin kebab-start {
+	@include transform(translate3d(-50em,-10em,0));
+}
+
+@mixin paycard-start {
+	@include transform(translate3d(50em, 25em,0));
+}
+
+/*==========================================
+	SLIDE 3
+============================================ */
+@mixin rewards-hand-start {
+	@include transform(translate3d(0, 3em,0));
+}
+
+/*==========================================
+	SLIDE 5
+============================================ */
+@mixin shiny-start {
+	@include transform(translate3d(0,0,0) rotate(360deg) scale(0));
+	opacity: 0;
+}
+
+@mixin champaign-left-start {
+	@include transform(translate3d(-100%,0,0));
+}
+
+@mixin champaign-right-start {
+	@include transform(translate3d(100%,0,0));
+}
+
+@mixin champaign-left-finish {
+	@include transform(translate3d(-10%,1em,0));
+}
+
+@mixin champaign-right-finish {
+	@include transform(translate3d(10%,1em,0));
+}
